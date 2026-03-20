@@ -1,0 +1,40 @@
+{
+  "testimonials": [
+    {
+      "id": "1",
+      "name": "Rahul Gandhi",
+      "rating": 3.50,
+      "comments": "The heirloom tomatoes are a game changer for my kitchen. You can't find this quality anywhere else!",
+      "img": "https://i.pravatar.cc/150?u=66"
+    },
+    {
+      "id": "2",
+      "name": "Narendra Modi",
+      "rating": 4.50,
+      "comments": "I recommend EmhaFarm to all my clients. Knowing the soil is chemical-free is essential for health.",
+      "img": "https://i.pravatar.cc/150?u=2"
+    },
+    {
+      "id": "3",
+      "name": "Nabeen Pattnaik",
+      "rating": 0,
+      "comments": "The subscription box is the highlight of my week. Fresh, vibrant, and always seasonal!",
+      "img": "https://i.pravatar.cc/150?u=3"
+    }
+  ],
+
+  "icon":[
+    {
+    "name":"abc",
+    "color":"red"
+  },
+    {
+    "name":"xyz",
+    "color":"green"
+  },
+    {
+    "name":"efg",
+    "color":"yellow"
+  }
+]
+}

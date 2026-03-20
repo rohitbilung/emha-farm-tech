@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 20s linear infinite;
+}
+
+/* Makes the background blur feel more organic */
+.backdrop-blur-md {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+}
+
+/* Custom smooth scroll for the whole dashboard */
+html {
+  scroll-behavior: smooth;
+}

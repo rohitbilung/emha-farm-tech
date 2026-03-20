@@ -1,0 +1,89 @@
+           {/* TESTIMONIALS */}
+            <section className="py-24 bg-stone-50 overflow-hidden">
+                <div className="max-w-4xl mx-auto px-6 text-center">
+                    <p className="text-400 font-semibold uppercase tracking-widest text-sm">What customers say about us.</p>
+                    <MessageSquareQuote className="mx-auto text-green-200 mb-8" size={40} />
+
+                    <div className="relative h-64 md:h-48">
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, x: 50 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: -50 }}
+                                transition={{ duration: 0.6, ease: "easeInOut" }}
+                                className="absolute inset-0"
+                            >
+                                <h3 className="text-2xl md:text-3xl font-medium text-stone-800 italic leading-relaxed mb-8">
+                                    "{current.comments}"
+                                </h3>
+
+                                <div className="flex flex-col items-center">
+                                    <img
+                                        src={current.img}
+                                        alt={current.name}
+                                        className="w-16 h-16 rounded-full border-4 border-white shadow-md mb-3"
+                                    />
+                                    <h4 className="font-bold text-stone-900">{current.name}</h4>
+                                    <p className="text-sm text-green-600 font-medium uppercase tracking-widest">
+                                        {current.role}
+                                    </p>
+                                    <div className="flex text-yellow-400 mt-2 gap-0.5">
+                                        {[...Array(5)].map((_, i) => {
+                                            const starValue = i + 1;
+
+                                            // Determine which star to show
+                                            return (
+                                                <span key={i}>
+                                                    {starValue <= current.rating ? (
+                                                        // Full Star
+                                                        <Star size={14} fill="currentColor" />
+                                                    ) : starValue - 0.5 <= current.rating ? (
+                                                        // Half Star (Only if the rating is something like 4.5)
+                                                        <StarHalf size={14} fill="currentColor" />
+                                                    ) : (
+                                                        // Empty Star (outline)
+                                                        <Star size={14} className="text-stone-300" />
+                                                    )}
+                                                </span>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
+<br></br>
+                    {/* Manual Navigation Dots */}
+                    <div className="flex justify-center gap-3 mt-12">
+                        {testimonial.map((_, i) => (
+                            <button
+                                key={i}
+                                onClick={() => setIndex(i)}
+                                className={`h-1.5 transition-all duration-300 rounded-full ${i === index ? "w-8 bg-green-600" : "w-3 bg-stone-300"
+                                    }`}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* SPONSORS SECTION */}
+            <section className="py-16 bg-white border-y border-stone-100 overflow-hidden">
+                <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
+                    <p className="text-stone-400 font-semibold uppercase tracking-widest text-sm">Trusted by Industry Leaders</p>
+                </div>
+                <div className="flex space-x-12 animate-marquee whitespace-nowrap">
+                    {['GreenEarth', 'EcoPack', 'SoilSafe', 'PureWater', 'NatureFirst'].map((brand) => (
+                        <span key={brand} className="text-3xl font-bold text-stone-300 hover:text-green-500 transition-colors cursor-default">
+                            {brand}
+                        </span>
+                    ))}
+                    {/* Duplicate for infinite effect */}
+                    {['GreenEarth', 'EcoPack', 'SoilSafe', 'PureWater', 'NatureFirst'].map((brand) => (
+                        <span key={brand + "2"} className="text-3xl font-bold text-stone-300 hover:text-green-500 transition-colors cursor-default">
+                            {brand}
+                        </span>
+                    ))}
+                </div>
+            </section>
