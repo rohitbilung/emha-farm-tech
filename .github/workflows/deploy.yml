@@ -1,1 +1,54 @@
 
+name: Deploy Portfolio Fully
+on:
+  push:
+    branches:
+      - production # This triggers the deploy when you push to this branch
+jobs:
+  deploy-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build React
+        run: |
+          cd frontend
+          npm install
+          npm run build
+      - name: Sync Frontend via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./frontend/dist/
+          server-dir: /home/redbilun/public_html/
+
+  deploy-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: FTP Deploy Backend
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./backend/ # Path to your Node files
+          server-dir: /home/redbilun/api.redbilung.in/ # The folder you set in cPanel Node Setup
+          exclude: |
+            node_modules/**
+            .git/**
+            .github/**
+            .env
+
+      - name: Trigger Restart
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./restart/
+          server-dir: /home/redbilun/api.redbilung.in/tmp/
+          dangerous-clean-slate: true
