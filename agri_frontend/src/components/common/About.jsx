@@ -69,7 +69,7 @@ export default function About() {
               farmers, delivers healthy and fully traceable food to consumers, and regenerates the environment for 
               future generations. Our mission is to enable farmers to adopt sustainable organic practices through 
               technology, training, and infrastructure, improve soil health and farm productivity, ensure fair 
-              market access, and provide transparent farm-to-fork traceability—creating a profitable, sustainable, 
+              market access, and provide transparent .......farm-to-fork traceability—creating a profitable, sustainable, 
               and trustworthy agricultural system..............."
             </p>
           </div>
