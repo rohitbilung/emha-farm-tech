@@ -58,14 +58,14 @@ export default function About() {
           </h2>
           
           <p className="text-stone-600 text-lg leading-relaxed mb-6">
-            EMHAFARM PVT LTD is a pioneering technology-driven agricultural entity dedicated to closing the gap between the farm and the fork. We believe that transparency shouldn't be a luxury—it should be the standard for every household.
+            EMHAFARM is a pioneering technology-driven agricultural entity dedicated to closing the gap between the farm and the fork. We believe that transparency shouldn't be a luxury—it should be the standard for every household.
           </p>
 
           {/* UNIFIED MISSION & VISION BLOCK */}
           <div className="bg-stone-50 border-l-4 border-green-600 p-8 rounded-r-3xl mb-10 shadow-sm">
             <h3 className="text-xl font-bold text-stone-900 mb-3 italic">Our Mission & Vision</h3>
             <p className="text-stone-700 leading-relaxed">
-              "EMHAFARM PVT LTD envisions building a technology-driven organic farming ecosystem that empowers 
+              "EMHAFARM envisions building a technology-driven organic farming ecosystem that empowers 
               farmers, delivers healthy and fully traceable food to consumers, and regenerates the environment for 
               future generations. Our mission is to enable farmers to adopt sustainable organic practices through 
               technology, training, and infrastructure, improve soil health and farm productivity, ensure fair 
