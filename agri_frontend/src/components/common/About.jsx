@@ -70,7 +70,7 @@ export default function About() {
               future generations. Our mission is to enable farmers to adopt sustainable organic practices through 
               technology, training, and infrastructure, improve soil health and farm productivity, ensure fair 
               market access, and provide transparent farm-to-fork traceability—creating a profitable, sustainable, 
-              and trustworthy agricultural system."
+              and trustworthy agricultural system..............."
             </p>
           </div>
 
