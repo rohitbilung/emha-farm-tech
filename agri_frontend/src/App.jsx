@@ -12,6 +12,8 @@ import { ProtectedRoute } from './components/common/ProtectedRoute'
 import { AuthProvider } from './context/AuthContext';
 import FarmerDashboard from './pages/FarmerDashboard';
 
+import LessonScreen from './pages/LessonScreen';
+
 function AppContent() {
   const location = useLocation();
 
@@ -27,7 +29,12 @@ function AppContent() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/trace/:getBatchParam" element={<TraceProduct />} />
-        <Route path="/farmer" element={<FarmerDashboard />} />
+        <Route path='/duo' element={<LessonScreen />} />
+        <Route path="/farmer" element={
+          <ProtectedRoute>
+            <FarmerDashboard />
+          </ProtectedRoute>
+          } />
 
         <Route
           path="/admin"

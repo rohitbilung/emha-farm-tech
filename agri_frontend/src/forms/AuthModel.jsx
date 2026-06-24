@@ -48,11 +48,16 @@ export const AuthModal = ({ isOpen, onClose }) => {
         localStorage.setItem('emhaToken', token)
         localStorage.setItem('emhaUser', JSON.stringify(userData));
         login(userData, token);
-        onClose();
         if(userData.role === 'farmer'){
           navigate('/farmer')
+        }else if(userData.role === 'admin'){
+          navigate('/admin');
+        }else{
+          setMessage({ type: 'error', text: 'This email is not register or authorized.' });
+          // setIsLoginView(false);
         }
-        navigate('/admin');
+        // onClose();
+
       } else {
         setMessage({ type: 'success', text: 'Registration successful! Please login.' });
         setIsLoginView(true);

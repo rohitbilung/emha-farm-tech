@@ -86,6 +86,7 @@ const ProductGrid = ({ products, loading, error, retry }) => {
                     </div>
                 )}
             </div>
+            <div className="my-6 h-[1px] w-full bg-gray-300"></div>
         </section>
     );
 }

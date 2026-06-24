@@ -73,10 +73,11 @@ const ProductTransparencyPortal = () => {
 
           {/* 1. LEFT COLUMN: Brand Logo */}
           <div className="flex-1 flex justify-start">
-            <div className="flex flex-col leading-none border-l-4 border-emerald-900 pl-3">
-              <span className="text-sm font-black text-green-700 tracking-tighter uppercase">Emhafarm</span>
-              <span className="text-[10px] text-emerald-600 font-bold tracking-[0.2em] uppercase">Pvt Ltd</span>
-            </div>
+            <img 
+    src="https://res.cloudinary.com/dxatj7ogd/image/upload/v1774332863/uploads/ozcesk4eeoqqnmg7vlwg.png" 
+    alt="Emhafarm Logo" 
+    className="h-8 w-auto object-contain"
+  />
           </div>
 
           {/* 2. CENTER COLUMN: Product Info (The "Hero" of the header) */}
@@ -116,7 +117,7 @@ const ProductTransparencyPortal = () => {
 
           {/* 3. RIGHT COLUMN: Spacer (Keeps center content perfectly centered) */}
           <div className="flex-1 flex justify-end">
-            <div className="text-[10px] text-emerald-700 font-bold uppercase tracking-widest hidden sm:block">
+            <div className="text-[10px] text-emerald-700 font-bold uppercase tracking-widest sm:block">
               Verified History
             </div>
           </div>
@@ -138,40 +139,7 @@ const ProductTransparencyPortal = () => {
 
       {/* SUSTAINABILITY DASHBOARD */}
       <div className="max-w-xl mx-auto px-6 mt-8">
-        <div className="bg-emerald-900 text-white p-6 rounded-3xl shadow-xl overflow-hidden relative">
-          <div className="relative z-10">
-            <div className="flex justify-between items-center mb-6">
-              <div>
-                <p className="text-[10px] uppercase font-bold text-emerald-300 tracking-widest">Sustainability Score</p>
-                <h2 className="text-3xl font-black">Grade {mockDb.sustainability.grade}</h2>
-              </div>
-              <div className="text-right">
-                <p className="text-[10px] uppercase font-bold text-emerald-300 tracking-widest">Total Footprint</p>
-                <p className="text-xl font-mono">{mockDb.sustainability.totalFootprint}</p>
-              </div>
-            </div>
-
-            {/* Mini Progress Bars for Metrics */}
-            <div className="grid grid-cols-2 gap-4">
-              {mockDb.sustainability.metrics.map(metric => (
-                <div key={metric.label}>
-                  <div className="flex justify-between text-[10px] mb-1 font-bold uppercase">
-                    <span>{metric.icon} {metric.label}</span>
-                    <span>{metric.score}/10</span>
-                  </div>
-                  <div className="h-1.5 w-full bg-emerald-800 rounded-full">
-                    <div
-                      className="h-full bg-emerald-400 rounded-full"
-                      style={{ width: `${metric.score * 10}%` }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          {/* Abstract Background Decoration */}
-          <div className="absolute -right-4 -bottom-4 w-32 h-32 bg-emerald-800 rounded-full blur-3xl opacity-50"></div>
-        </div>
+        
       </div>
 
       {/* 3. THE JOURNEY (Timeline) */}
@@ -226,8 +194,8 @@ const CertificateGallery = (batch) => {
   const certificates = [
     { id: 1, name: "USDA Organic", issuer: "Dept. of Agriculture", icon: "📜", image: "organic_cert.jpg" },
     { id: 2, name: "ISO 22000", issuer: "Food Safety Mgmt", icon: "🛡️", image: "iso_cert.jpg" },
-    { id: 3, name: "Fair Trade", issuer: "Fairtrade Intl.", icon: "🤝", image: "fair_trade.jpg" },
-    { id: 4, name: "Carbon Neutral", issuer: "Climate Standard", icon: "🌍", image: "carbon_cert.jpg" }
+    // { id: 3, name: "Fair Trade", issuer: "Fairtrade Intl.", icon: "🤝", image: "fair_trade.jpg" },
+    // { id: 4, name: "Carbon Neutral", issuer: "Climate Standard", icon: "🌍", image: "carbon_cert.jpg" }
   ];
   return (
     <section className="max-w-xl mx-auto px-6 mt-12  border-t border-stone-200 pt-6">

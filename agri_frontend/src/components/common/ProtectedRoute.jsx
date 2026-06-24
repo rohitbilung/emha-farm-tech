@@ -10,7 +10,7 @@ export const ProtectedRoute = ({ children }) => {
       // Pass the error message through navigation state
       navigate('/', { 
         replace: true, 
-        state: { authError: "Access Denied: Please login as an admin to view that page." } 
+        state: { authError: "Access Denied: Please login to view that page." } 
       });
     }
   }, [token, navigate]);

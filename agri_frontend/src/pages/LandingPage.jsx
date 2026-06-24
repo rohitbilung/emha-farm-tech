@@ -23,7 +23,7 @@ export default function LandingPage() {
     const slideImages = [
         "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2000",
         "https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=2000",
-        "https://images.unsplash.com/photo-1595841696677-6489ff3f8cd1?q=80&w=2000"
+        "https://res.cloudinary.com/dxatj7ogd/image/upload/v1774333610/uploads/yympexkya0pwi1a58tvl.jpg"
     ];
 
     const fetchAllData = async () => {
@@ -113,8 +113,9 @@ export default function LandingPage() {
                 error={error}
                 retry={fetchAllData}
             />
+            
             {/* Testimonials will stay hidden if the array is empty */}
-            <Testimonials testimonials={testimonials} />
+            {/* <Testimonials testimonials={testimonials} /> */}
             <Contact />
         </div>
     );

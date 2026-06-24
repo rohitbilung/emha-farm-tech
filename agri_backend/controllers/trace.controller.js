@@ -43,11 +43,6 @@ module.exports = {
 
     getBatchs: async (req, res) => {
         try {
-
-
-            console.log(req.query)
-            console.log(req.params)
-
             let { page = 1, limit } = req.query;
             page = parseInt(page);
             limit = parseInt(limit);

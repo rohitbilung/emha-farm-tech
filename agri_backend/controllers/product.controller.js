@@ -100,7 +100,7 @@ module.exports = {
 
     getFewProducts: async (req, res) => {
         try {
-            const product = await Product.find({}).sort({_id:1}).limit(6);
+            const product = await Product.find({}).sort({_id:-1}).limit(6);
             // if (product.length==0) {
             //     return res.status(400).json({ message: "Product not available" });
             // }

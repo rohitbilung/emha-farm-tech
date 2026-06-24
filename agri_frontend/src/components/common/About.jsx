@@ -21,26 +21,22 @@ export default function About() {
         >
           <div className="space-y-4">
             <img 
-              src="https://images.unsplash.com/photo-1595841696677-6489ff3f8cd1?q=80&w=600" 
+              src="https://res.cloudinary.com/dxatj7ogd/image/upload/v1774334362/mahua-oil-500x500_nj4u0d.jpg" 
               alt="Farmer" 
               className="rounded-3xl h-64 w-full object-cover shadow-lg mt-12"
             />
             <img 
-              src="https://images.unsplash.com/photo-1595841696677-6489ff3f8cd1?q=80&w=600" 
+              src="https://res.cloudinary.com/dxatj7ogd/image/upload/v1774337593/about2_bzxycz.jpg" 
               alt="Farmer" 
               className="rounded-3xl h-64 w-full object-cover shadow-lg mt-12"
             />
           </div>
           <div className="space-y-4">
             <img 
-              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=600" 
+              src="https://res.cloudinary.com/dxatj7ogd/image/upload/v1774333893/about1_ol5nzj.avif" 
               alt="The Field" 
-              className="rounded-3xl h-[450px] w-full object-cover shadow-lg"
+              className="rounded-3xl h-[450px] w-full object-cover shadow-lg mt-24"
             />
-            <div className="bg-green-600 p-8 rounded-3xl text-white">
-              <h4 className="text-4xl font-bold mb-2">100%</h4>
-              <p className="text-green-100 text-sm font-medium uppercase tracking-wider">Organic Certified Standards</p>
-            </div>
           </div>
         </motion.div>
 
@@ -69,8 +65,8 @@ export default function About() {
               farmers, delivers healthy and fully traceable food to consumers, and regenerates the environment for 
               future generations. Our mission is to enable farmers to adopt sustainable organic practices through 
               technology, training, and infrastructure, improve soil health and farm productivity, ensure fair 
-              market access, and provide transparent .......farm-to-fork traceability—creating a profitable, sustainable, 
-              and trustworthy agricultural system..............."
+              market access, and provide transparent farm-to-fork traceability—creating a profitable, sustainable, 
+              and trustworthy agricultural system."
             </p>
           </div>
 

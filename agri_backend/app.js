@@ -15,6 +15,7 @@ require('dotenv').config();
 //         'http://emhafarm.in',
 //         'www.emhafarm.in',
 //         'emhafarm.in',
+            // 'redbilung.in',
         // 'http://localhost:5173'
 //     ]
 // }else{
@@ -28,7 +29,9 @@ let url = ['http://localhost:5173']
 //         'https://emhafarm.in',
 //         'http://emhafarm.in',
 //         'www.emhafarm.in',
-//         'emhafarm.in'
+//         'emhafarm.in',
+//         'redbilung.in',
+//         'https://redbilung.in',
 //     ]
 
 let corsOptions = {

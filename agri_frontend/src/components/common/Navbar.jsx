@@ -7,7 +7,7 @@ import { AuthModal } from '../../forms/AuthModel';
 export default function Navbar() {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const [isAuthOpen, setIsAuthOpen] = useState(false);
-  
+
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
@@ -21,7 +21,7 @@ export default function Navbar() {
   ];
 
   // Filter the links based on current path
-  const visibleLinks = navLinks.filter(link => 
+  const visibleLinks = navLinks.filter(link =>
     link.showOn === 'all' || (isHomePage && link.showOn === 'home')
   );
 
@@ -36,7 +36,13 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           {/* Logo */}
           <Link to="/" onClick={closeAll} className="flex items-center gap-2 text-green-700 font-bold text-2xl">
-            <Leaf fill="currentColor" /> <span>EmhaFarm</span>
+            {/* <Leaf fill="currentColor" /> */}
+            <img
+              // src="https://res.cloudinary.com/dxatj7ogd/image/upload/v1773898926/uploads/ybx6wjknehf7cyzzujmn.png"
+              src="https://res.cloudinary.com/dxatj7ogd/image/upload/v1774332863/uploads/ozcesk4eeoqqnmg7vlwg.png"
+              alt="EmhaFarm Logo"
+              className="h-8 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Links (Dynamically Filtered) */}
